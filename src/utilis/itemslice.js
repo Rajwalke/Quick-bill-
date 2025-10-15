@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import Currency from "../components/Currency";
 
 const itemSlice=createSlice({
     name:'itemsSlice',
@@ -13,7 +14,9 @@ const itemSlice=createSlice({
         ],
         others:{
             discount:0,
-            tax:0
+            tax:0,
+            subtotal:0,
+            total:0
         },
         personinfoFrom:{
             name:'',
@@ -29,7 +32,8 @@ const itemSlice=createSlice({
             cureentDate:'',
             dueDate:'',
             invoiceNo:''
-        }
+        },
+        CurrencySymbol:"₹"
     },
     reducers:{
         addItem:(state,action)=>{
@@ -70,6 +74,12 @@ const itemSlice=createSlice({
         updateTax:(state,action)=>{
             state.others.tax=action.payload;
         },
+        updateSubtotal:(state,action)=>{
+            state.others.subtotal=action.payload;
+        },
+        updatetotal:(state,action)=>{
+            state.others.total= Math.round(action.payload*100)/100;
+        },
         updateFrom:(state,action)=>{
             const {value,status}=action.payload;
             state.personinfoFrom[status]=value;
@@ -81,9 +91,12 @@ const itemSlice=createSlice({
         updatebillDates:(state,action)=>{
             const {value,status}=action.payload
             state.billDates[status]=value
+        },
+        updateCurrency:(state,action)=>{
+            state.CurrencySymbol=action.payload;
         }
 
     }
 });
 export default itemSlice.reducer;
-export const {addItem,updatename,updatedescription,updateprice,updatequantity,deleteItem,updateDiscount,updateTax,updateFrom,updateTo,updatebillDates}=itemSlice.actions;
+export const {addItem,updatename,updatedescription,updateprice,updatequantity,deleteItem,updateDiscount,updateTax,updateFrom,updateTo,updatebillDates,updateCurrency,updateSubtotal,updatetotal}=itemSlice.actions;

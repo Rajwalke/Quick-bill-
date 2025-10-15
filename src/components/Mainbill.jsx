@@ -9,11 +9,26 @@ const Mainbill=()=>{
     // const [allItems,setallItemname]=useState(allItemsCard)
     return(
         <div>
-            {
-                allItemsCard.map((val,index)=>(
-                    <Itemcard key={index}  allinfo={val} srNo={index} />
-                ))
-            }
+            <table className="w-full">
+                <thead className="text-center">
+                    <td>Sr No</td>
+                    <td>Product</td>
+                    <td>Description</td>
+                    <td>Quantity</td>
+                    <td>Price</td>
+                    <td>Action</td>
+                </thead>
+                <tbody className="">
+                    {
+                        allItemsCard.map((val,index)=>(
+                         <Itemcard key={index}  allinfo={val} srNo={index} />
+                        ))
+                    }
+                </tbody>
+                
+
+            </table>
+            
             
 
             <div>

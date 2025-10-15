@@ -1,0 +1,17 @@
+export const currencies = [
+  { country: "India", code: "INR", name: "Indian Rupee", symbol: "₹" },
+  { country: "United States", code: "USD", name: "US Dollar", symbol: "$" },
+  { country: "European Union", code: "EUR", name: "Euro", symbol: "€" },
+  { country: "United Kingdom", code: "GBP", name: "British Pound Sterling", symbol: "£" },
+  { country: "Japan", code: "JPY", name: "Japanese Yen", symbol: "¥" },
+  { country: "Canada", code: "CAD", name: "Canadian Dollar", symbol: "$" },
+  { country: "Australia", code: "AUD", name: "Australian Dollar", symbol: "$" },
+  { country: "Switzerland", code: "CHF", name: "Swiss Franc", symbol: "Fr." },
+  { country: "Singapore", code: "SGD", name: "Singapore Dollar", symbol: "$" },
+  { country: "United Arab Emirates", code: "AED", name: "UAE Dirham", symbol: "د.إ" },
+  { country: "Bitcoin", code: "BTC", name: "Bitcoin", symbol: "₿" },
+  { country: "Ethereum", code: "ETH", name: "Ethereum", symbol: "Ξ" },
+  { country: "Litecoin", code: "LTC", name: "Litecoin", symbol: "Ł" },
+  { country: "Ripple", code: "XRP", name: "Ripple", symbol: "✕" },
+  { country: "Dogecoin", code: "DOGE", name: "Dogecoin", symbol: "Ð" },
+];

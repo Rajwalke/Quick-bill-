@@ -6,6 +6,7 @@ import { Provider } from 'react-redux'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Body from './components/Body.jsx'
 import Left from './components/Left.jsx'
+import Invoice from './components/Invoice.jsx'
 
 const appRoute=createBrowserRouter([
   {
@@ -13,8 +14,8 @@ const appRoute=createBrowserRouter([
     element:<Body/>
   },
   {
-    path:"/frontpage",
-    element:<Left/>
+    path:"/invoice",
+    element:<Invoice/>
   }
 ])
 
