@@ -33,7 +33,8 @@ const itemSlice=createSlice({
             dueDate:'',
             invoiceNo:''
         },
-        CurrencySymbol:"₹"
+        CurrencySymbol:"₹",
+        statusOfPayment:"-",
     },
     reducers:{
         addItem:(state,action)=>{
@@ -94,9 +95,12 @@ const itemSlice=createSlice({
         },
         updateCurrency:(state,action)=>{
             state.CurrencySymbol=action.payload;
+        },
+        updateStatusOfPayment:(state,action)=>{
+            state.statusOfPayment=action.payload;
         }
 
     }
 });
 export default itemSlice.reducer;
-export const {addItem,updatename,updatedescription,updateprice,updatequantity,deleteItem,updateDiscount,updateTax,updateFrom,updateTo,updatebillDates,updateCurrency,updateSubtotal,updatetotal}=itemSlice.actions;
+export const {addItem,updatename,updatedescription,updateprice,updatequantity,deleteItem,updateDiscount,updateTax,updateFrom,updateTo,updatebillDates,updateCurrency,updateSubtotal,updatetotal,updateStatusOfPayment}=itemSlice.actions;

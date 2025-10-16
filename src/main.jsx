@@ -7,15 +7,16 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Body from './components/Body.jsx'
 import Left from './components/Left.jsx'
 import Invoice from './components/Invoice.jsx'
+import Frontpage from './components/Frontpage.jsx'
 
 const appRoute=createBrowserRouter([
   {
     path:"/",
-    element:<Body/>
+    element:<Frontpage/>
   },
   {
-    path:"/invoice",
-    element:<Invoice/>
+    path:"/quickbill",
+    element:<Body/>
   }
 ])
 

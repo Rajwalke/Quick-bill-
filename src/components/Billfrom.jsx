@@ -5,30 +5,40 @@ const Billfrom=()=>{
     const fromInfo=useSelector((store)=>store.itemSlice.personinfoFrom);
     const dispatch=useDispatch();
     return(
-        <div className="flex flex-col">
-                    <label>Bill from</label>
-                    <input className="inp_filed p-2 text-start text-md" placeholder="Who is the invoice from"
+         <div className="flex flex-col gap-4 flex-1">
+            <h3 className="text-lg font-semibold text-slate-800 mb-2">Bill From</h3>
+            
+            <div className="flex flex-col gap-2">
+                <input 
+                    className="px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition text-sm" 
+                    placeholder="Your name or business"
                     value={fromInfo.name}
                     onChange={(e)=>{
                         dispatch(updateFrom({value:e.target.value,status:"name"}))
                     }}
-                    />
-                    <input className="inp_filed p-2 text-start text-md"  placeholder="Email address" 
+                />
+                
+                <input 
+                    className="px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition text-sm"  
+                    placeholder="Email address" 
                     type="email"
                     value={fromInfo.email}
                     onChange={(e)=>{
                        dispatch(updateFrom({value:e.target.value,status:"email"}))
                     }}
-                    />
-                    <input className="inp_filed p-2 text-start text-md" placeholder="Billing address"
+                />
+                
+                <input 
+                    className="px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition text-sm" 
+                    placeholder="Billing address"
                     type="text"
                     value={fromInfo.billingadress}
                     onChange={(e)=>{
                         dispatch(updateFrom({value:e.target.value,status:"billingadress"}))
                     }}
-                    />
-
-                </div>
+                />
+            </div>
+        </div>
     )
 };
 export default Billfrom;
