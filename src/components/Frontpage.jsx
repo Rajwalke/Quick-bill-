@@ -28,10 +28,15 @@ const Frontpage = () => {
                     </div>
 
                     {/* CTA Button */}
-                    <div className="pt-4">
+                    <div className="pt-4 flex flex-col gap-3">
                         <Link to="/quickbill">
                             <button className="cursor-pointer bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 rounded-lg text-lg transition-colors shadow-lg hover:shadow-xl">
                                 Create Invoice Now
+                            </button>
+                        </Link>
+                        <Link to="/currencyconverter">
+                            <button className="cursor-pointer bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 rounded-lg text-lg transition-colors shadow-lg hover:shadow-xl">
+                                Currency Convertor
                             </button>
                         </Link>
                     </div>

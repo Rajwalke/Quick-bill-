@@ -4,6 +4,8 @@ import { updateFrom } from "../utilis/itemslice";
 const Billfrom=()=>{
     const fromInfo=useSelector((store)=>store.itemSlice.personinfoFrom);
     const dispatch=useDispatch();
+
+    
     return(
          <div className="flex flex-col gap-4 flex-1">
             <h3 className="text-lg font-semibold text-slate-800 mb-2">Bill From</h3>

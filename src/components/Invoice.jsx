@@ -15,11 +15,11 @@ const Invoice=(props)=>{
     const statusOfPayment=overalldata.statusOfPayment;
     const invoiceRef = useRef(null);
     
-    console.log("bill date is ",dateData);
+    // console.log("bill date is ",dateData);
     
     const downloadInvoice = async () => {
         try {
-            console.log('Starting PDF generation...');
+            // console.log('Starting PDF generation...');
             
             // Create a temporary container
             const tempContainer = document.createElement('div');
@@ -119,7 +119,7 @@ const Invoice=(props)=>{
             // Remove temp container
             document.body.removeChild(tempContainer);
             
-            console.log('Canvas created successfully');
+            // console.log('Canvas created successfully');
             
             // Create PDF
             const imgWidth = 210;
@@ -145,10 +145,10 @@ const Invoice=(props)=>{
             const fileName = `Invoice_${dateData.invoiceNo || 'draft'}_${Date.now()}.pdf`;
             pdf.save(fileName);
             
-            console.log('PDF downloaded successfully');
+            // console.log('PDF downloaded successfully');
             
         } catch (error) {
-            console.error('Detailed error:', error);
+            // console.error('Detailed error:', error);
             alert(`Failed to generate PDF: ${error.message}`);
         }
     };

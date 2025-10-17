@@ -8,6 +8,8 @@ import Body from './components/Body.jsx'
 import Left from './components/Left.jsx'
 import Invoice from './components/Invoice.jsx'
 import Frontpage from './components/Frontpage.jsx'
+import Crouser from './components/Crouser.jsx'
+import Currencyconverter from './components/CurrencyConvertor.jsx'
 
 const appRoute=createBrowserRouter([
   {
@@ -17,6 +19,14 @@ const appRoute=createBrowserRouter([
   {
     path:"/quickbill",
     element:<Body/>
+  },
+  {
+    path:'/Crouser',
+    element:<Crouser/>
+  },
+  {
+    path:'/currencyconverter',
+    element:<Currencyconverter/>
   }
 ])
 
